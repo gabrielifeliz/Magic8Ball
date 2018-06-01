@@ -25,31 +25,30 @@ public class Magic8Ball {
         output("HELLO THERE! Ask a question to the MAGIC 8-BALL...");
         String question = keyboard.nextLine();
 
-        output("");
-        // Display first question from user
-        output("YOU ASKED: " + question);
+                // Display first question from user
+        output("\n\nYOU ASKED: " + question);
         /* Display random answer from Magic 8-Ball,
             accessing the String array with possible index from 0 to 19 */
-        output("MAGIC 8-BALL SAYS: " + magic8BallAnswers[rnd.nextInt(19)]);
+        output("\nMAGIC 8-BALL SAYS: " + magic8BallAnswers[rnd.nextInt(19)]);
         // Prompt user for continuing asking question to the Magic 8-Ball and receive answer
-        output("Do you have another question for the Magic 8-Ball? (y/n)");
+        output("\nDo you have another question for the Magic 8-Ball? (y/n)");
         String choice = keyboard.next();
 
         /* Enter the while loop if user enters "Y" or "y"
             Otherwise, skip it */
         while (choice.equalsIgnoreCase("y")) {
-            output("");
+
             // Prompt user for other questions and receive them
-            output("What's your question?");
+            output("\n\nWhat's your question?");
             keyboard.nextLine();  // Clean up any extra newline character (\n)
             question = keyboard.nextLine();
 
             // Display other questions from user
-            output("YOU ASKED: " + question);
+            output("\nYOU ASKED: " + question);
             // Display random answers from Magic 8-Ball
-            output("MAGIC 8-BALL SAYS: " + magic8BallAnswers[rnd.nextInt(19)]);
+            output("\nMAGIC 8-BALL SAYS: " + magic8BallAnswers[rnd.nextInt(19)]);
             // Prompt user for continuing asking question to the Magic 8-Ball and receive answer again
-            output("Do you have another question for the Magic 8-Ball? (y/n)");
+            output("\nDo you have another question for the Magic 8-Ball? (y/n)");
             choice = keyboard.next();
 
             // while loop ends when user enters "N" or "n", which is not equal to "Y" or "y"
